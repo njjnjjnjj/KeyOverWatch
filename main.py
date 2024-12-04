@@ -1,4 +1,26 @@
 from plyer import notification
+import keyboard
+import pystray
+from PIL import Image
+from pystray import MenuItem
+
+from db import init_db
+
+
+def click_menu(icon, item):
+    print("点击了", item)
+
+
+def on_exit(icon, item):
+    icon.stop()
+
+
+# 创建菜单
+def create_menu():
+    menu = (MenuItem(text='退出', action=on_exit))
+    image = Image.open("./resource/kow.ico")
+    icon = pystray.Icon("name", image, "KeyOverWatch\n守护你的健康", [menu])
+    icon.run()
 
 
 def notify(title, message):
@@ -8,4 +30,15 @@ def notify(title, message):
     )
 
 
-notify('休息提醒', '已敲击xxx次键盘，休息一下！')
+def on_key_pressed(event):
+    print(f"按下的键：{event.name}")
+
+
+if __name__ == '__main__':
+    # 初始化数据库
+    init_db()
+    # print("开始创建托盘...")
+    # create_menu()
+    print("开始监听键盘输入...")
+    keyboard.on_press(on_key_pressed)
+    keyboard.wait('esc')  # 等待按下 ESC 键来退出程序
