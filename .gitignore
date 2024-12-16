@@ -1,0 +1,123 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pipfile
+Pipfile
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Pyre
+.pyre/
+
+# Pylint report
+pylint-report.txt
+
+# Mypy report
+dmypy.json
+dmypy.sock
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Pyright
+pyrightconfig.json
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# SageMath notebook files
+*.sage.py
+
+# Sphinx documentation
+docs/_build/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Environments
+.env
+.envrc
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.DS_Store
+Thumbs.db
+
+# Static files
+staticfiles/
+*.log
