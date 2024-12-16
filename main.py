@@ -4,7 +4,7 @@ import pystray
 from PIL import Image
 from pystray import MenuItem
 
-from db import init_db
+from db import init_db, save_key_event
 
 
 def click_menu(icon, item):
@@ -32,11 +32,13 @@ def notify(title, message):
 
 def on_key_pressed(event):
     print(f"按下的键：{event.name}")
+    save_key_event(event.name)
 
 
 if __name__ == '__main__':
     # 初始化数据库
     init_db()
+    # TODO: 这里创建托盘并开始做 UI
     # print("开始创建托盘...")
     # create_menu()
     print("开始监听键盘输入...")
