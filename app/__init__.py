@@ -8,3 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_SQL_DIR = os.path.join(STATIC_DIR, 'sql')
 STATIC_IMAGE_DIR = os.path.join(STATIC_DIR, 'images')
+
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
+if not os.path.exists(DATA_DIR):
+    os.mkdir(DATA_DIR)

@@ -1,9 +1,9 @@
 import os
 import sqlite3
 
-from app import STATIC_SQL_DIR, BASE_DIR
+from app import STATIC_SQL_DIR, DATA_DIR
 
-SQLITE_DB_FILE = os.path.join(BASE_DIR, "kow.db")
+SQLITE_DB_FILE = os.path.join(DATA_DIR, "kow.db")
 CREATE_SQL_FILE = os.path.join(STATIC_SQL_DIR, "create.sql")
 
 
