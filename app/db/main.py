@@ -1,7 +1,10 @@
+import os
 import sqlite3
 
-SQLITE_DB_FILE = "kow.db"
-CREATE_SQL_FILE = "resource/create.sql"
+from app import STATIC_SQL_DIR, BASE_DIR
+
+SQLITE_DB_FILE = os.path.join(BASE_DIR, "kow.db")
+CREATE_SQL_FILE = os.path.join(STATIC_SQL_DIR, "create.sql")
 
 
 # 创建数据库连接
